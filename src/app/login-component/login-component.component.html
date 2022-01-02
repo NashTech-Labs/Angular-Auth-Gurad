@@ -1,0 +1,38 @@
+<div class="d-flex flex-column justify-content-center align-items-center w-100 h-100" >
+  <h1>Login Form</h1>
+<form [formGroup]="form">
+  <div class="input-field m-2">
+    <span class="form-label" > Email</span>
+    <input
+      matInput
+      type="email"
+      name="email"
+      class="form-control"
+      placeholder="Email"
+      formControlName="email"
+      autocomplete="disable"
+    />
+  </div>
+  <div class="input-field m-2">
+    <span class="form-label" >Password</span>
+    <input
+      matInput
+      type="password"
+      class="form-control"
+      placeholder="Password"
+      formControlName="password"
+      autocomplete="disable"
+    />
+  </div>
+
+  <button
+    class="btn btn-primary m-2 mt-3"
+    type="submit"
+    (click)="formValue()"
+    [disabled]="form.invalid"
+  >
+    Save
+  </button>
+</form>
+</div>
+
